@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using System.Timers;
+public class random : MonoBehaviour
+{
+    public Rigidbody2D adam;
+    int saniye;
+    float hiz=1;
+    float time = 0.0f;
+    float interpolationPeriod;
+    int randx, randy;
+    
+
+    void Update()
+    {
+        
+
+        time += Time.deltaTime;
+
+        if (time >= interpolationPeriod)
+        {
+            hiz = Random.Range(0.5f, 1.2f);
+            time = 0.0f;
+            interpolationPeriod = Random.Range(0.5f, 3.0f);
+            saniye = Random.Range(1, 5);
+            randx = Random.Range(-7, 7);
+            randy = Random.Range(-7, 7);
+            adam.velocity = new Vector2(randx, randy) * hiz;
+            // execute block of code here
+        }
+
+        /*switch (saniye)
+        {
+            case 1:
+                adam.velocity = new Vector2(randx, randy) * hiz;
+                break;
+            case 2:
+                adam.velocity = new Vector2(randx, randy) *hiz;
+                break;
+            case 3:
+                adam.velocity = new Vector2(randx, randy) *hiz;
+                break;
+            case 4:
+                adam.velocity = new Vector2(randx, randy) *hiz;
+                break;
+        }
+        */
+
+        //transform.Translate(rx, ry, 0f);
+    }
+}
