@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Hareket : MonoBehaviour
+{
+
+   // public Rigidbody2D cember;
+    public float xYon,yYon;
+
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      //  float yatay = Input.GetAxis("Horizontal") * xYon;
+      //  float dikey = Input.GetAxis("Vertical") * yYon;
+       // float yatay = Input.GetAxis("Mouse X") *xYon;
+       // float dikey = Input.GetAxis("Mouse Y") * yYon;
+
+       // transform.Translate(yatay*Time.deltaTime, dikey*Time.deltaTime, 0f);
+
+
+    }
+
+    
+
+}
